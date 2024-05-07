@@ -7,20 +7,7 @@ const Card = ({card}) => {
 
     
     return (
-      <div>
-        <div className="card w-96 glass">
-          <figure>
-            <img
-              src={image}
-              alt="car!"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">{category}</h2>
-            <p>{title}</p>
-          </div>
-        </div>
-      </div>
+      <h1></h1>
     );
 };
 
