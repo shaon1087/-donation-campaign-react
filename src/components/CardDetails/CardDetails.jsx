@@ -14,7 +14,7 @@ const CardDetails = () => {
     return (
       <div>
         <h1>card:{cards.length}</h1>
-        <div className="">
+        <div className="grid">
           {cards.map((card) => (
             <Card key={card.id} card={card}></Card>
           ))}

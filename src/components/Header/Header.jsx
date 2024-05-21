@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/Logo.png";
 
 
 
@@ -20,7 +21,7 @@ const Header = () => {
       <div>
         <div className="navbar bg-base-100">
           <div className="navbar-start">
-            <div className="dropdown">
+            <div className="dropdown pt-16 ">
               <div
                 tabIndex={0}
                 role="button"
@@ -43,19 +44,17 @@ const Header = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2  w-52"
+                className="dropdown-content mt-15 z-[1] p-2  w-52"
               >
                 {links}
               </ul>
             </div>
-            <a className="btn btn-ghost text-xl font-bold">CareerHub </a>
+            <a className=" pt-12 "><img src={logo} alt="" /></a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{links}</ul>
           </div>
-          <div className="navbar-end">
-            <a className="btn bg-purple-600 text-white ">Start Applying</a>
-          </div>
+          
         </div>
       </div>
     );

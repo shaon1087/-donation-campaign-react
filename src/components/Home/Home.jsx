@@ -5,7 +5,7 @@ import CardDetails from "../CardDetails/CardDetails";
 
 const Home = () => {
     return (
-        <div>
+        <div className="sm:pt-16">
             <h1>this is home</h1>
             <Banner></Banner>
             <CardDetails></CardDetails>
