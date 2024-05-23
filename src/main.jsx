@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom/client'
 
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Root from './components/Root/Root'
-import ErrorElement from './components/ErrorElement/ErrorElement'
-import Home from './components/Home/Home'
+import Root from './Layout/Root/Root'
+import Home from './Pages/Home/Home'
+import Donation from './Pages/Donation/Donation'
+import Statistics from "./Pages/Statistics/Statistics";
+import ErrorElement from "./Pages/ErrorElement/ErrorElement";
+
 
 const router = createBrowserRouter([
   {
@@ -16,6 +19,15 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("/public/donation.json")
+      },
+      {
+        path: "/donation",
+        element: <Donation></Donation>,
+      },
+      {
+        path: "/statistics",
+        element: <Statistics></Statistics>,
       },
     ],
   },
