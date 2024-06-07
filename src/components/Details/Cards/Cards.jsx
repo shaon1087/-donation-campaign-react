@@ -2,17 +2,8 @@
 import PropTypes from "prop-types";
 
 const Cards = ({ detail }) => {
-  const { id, image, title, amount, categoryBackgroundColor, description } =
+  const {  image, title, amount, categoryBackgroundColor, description } =
     detail;
-
-  const handleAddToDonation = () => {
-    const addedDonationArray = [];
-    const donationItems = JSON.parse(localStorage.getItem("donation")) || [];
-
-    const isExists = donationItems.find((donation) => donation.id === id);
-  }
-
-   ;
 
   return (
     <div>
@@ -20,7 +11,7 @@ const Cards = ({ detail }) => {
         <img className="w-full h-full" src={image} alt={title} />
         <div className="absolute bg-[#0000004D] w-full bottom-0 py-8 px-6">
           <button
-            onClick={handleAddToDonation}
+           
             style={{ backgroundColor: categoryBackgroundColor }}
             className="py-4 px-3 rounded-lg border-none text-xl font-semibold text-white"
           >
